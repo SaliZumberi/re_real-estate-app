@@ -1,1 +1,6 @@
-<p>buildings works!</p>
+<p>Buildings</p>
+Hi there, here you see all your buildings.
+
+<div *ngFor="let building of buildings$ | async">
+  <re-building-item></re-building-item>
+</div>
