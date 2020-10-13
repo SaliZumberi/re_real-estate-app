@@ -6,6 +6,8 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "./shared/modules/material/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {BuildingsService} from "./shared/services/buildings.service";
 
 @NgModule({
   declarations: [
@@ -14,12 +16,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [BuildingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
