@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Building} from "../models/building.model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,9 @@ export class BuildingsService {
 
   }
 
-  getBuildings(): Observable<any> {
+  getBuildings(): Observable<Building[]> {
     return this.httpClient
-      .get('assets/data/buildings.json', {withCredentials: true})
+      .get<Building[]>('assets/data/buildings.json', {withCredentials: true})
   }
 
 

@@ -1,3 +1,16 @@
 [{
-  "" : ""
+  "id": "1f4c7c7d-a988-4eef-92a7-e37f5980ee5c",
+  "address" : {
+    "id": "0c49e0b6-13b6-47a0-88b0-bf52884d4559",
+    "street": "Mary Axe",
+    "streetNumber": "30",
+    "zip": 5201,
+    "place": "London",
+    "updatedAt" : "2012-11-14T15:25:33Z",
+    "createdAt:": "2012-11-14T15:25:33Z"
+  },
+  "imageUrl": "https://www.histerius.com/hs0719/swiss_re.jpg",
+  "nickNames": [],
+  "updatedAt" : "2012-11-14T15:25:33Z",
+  "createdAt:": "2012-11-14T15:25:33Z"
 }]
