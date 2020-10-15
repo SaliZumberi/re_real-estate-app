@@ -1,6 +1,13 @@
-<p>Buildings</p>
-Hi there, here you see all your buildings.
+<div class="buildings-header">
+  <div class="mat-display-1">Buildings</div>
+  <button mat-raised-button class="add-building" color="primary">Add Building</button>
+</div>
 
-<div *ngFor="let building of buildings$ | async">
-  <re-building-item></re-building-item>
+<div class="building-items" *ngIf=" (buildings$ | async).length >0">
+  <re-building-item *ngFor="let building of buildings$ | async" [building]="building"></re-building-item>
+</div>
+<div class="no-items-box" *ngIf=" (buildings$ | async).length ===0">
+  <mat-icon class="no-items-icon">domain</mat-icon>
+  <div class="no-items-title">No Buildings found</div>
+  <div  class="no-items-subtitle">Add a new Building.</div>
 </div>

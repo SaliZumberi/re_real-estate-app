@@ -1,0 +1,44 @@
+.buildings-header{
+  margin-bottom: 30px;
+}
+.building-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: left;
+  justify-content: space-between;
+}
+
+.add-building {
+  float: right
+}
+
+.mat-display-1 {
+  display: inline;
+}
+
+.no-items-box {
+  text-align: center;
+}
+
+.no-items-icon {
+  width: 22rem;
+  height: 22rem;
+  font-size: 22rem;
+  color: #cecece;;
+}
+
+.no-items-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #505050;
+  margin-bottom: 20px;
+}
+
+.no-items-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #505050ad;
+}
+
