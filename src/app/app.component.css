@@ -1,9 +1,8 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.page-content{
+  padding: 40px 20% 0;
 }
 
-.example-full-width {
-  width: 100%;
+.top-navbar{
+  background-color: #ffffff !important;
+  box-shadow: rgba(12, 52, 75, 0.05) 0px 3px 3px !important;
 }
