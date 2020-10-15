@@ -1,1 +1,61 @@
-<p>building works!</p>
+<mat-card class="building-item-card">
+  <mat-card-header class="mat-card-header">
+    <mat-card-title>
+      <div class="content-box">
+        <div>{{building.address.streetNumber}}, {{building.address.street}}</div>
+        <div>
+          <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon [matMenuTriggerFor]="menu" >more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <div class="content-box">
+        <div class="label place-box-label">{{building.address.zip}} {{building.address.place}}</div>
+        <div class="nickname-counts-label"
+             [ngClass]="{'enabled': building.nickNames.length}">{{building.nickNames.length > 0 ? building.nickNames.length + ' Nicknames' : 'No Nicknames'}}</div>
+      </div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="building.imageUrl"
+       alt="Building at {{building.address.streetNumber}}, {{building.address.street}}, {{building.address.zip}} {{building.address.place}} ">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+    <mat-divider></mat-divider>
+
+  </mat-card-content>
+  <mat-card-actions >
+    <div *ngIf="building.nickNames.length>0">
+      <p><b>Nicknames</b></p>
+      <mat-chip-list aria-label="Color selection">
+        <mat-chip *ngFor="let chip of building.nickNames">
+          {{chip.name}}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+    <div *ngIf="building.nickNames.length === 0" class="add-nickname">
+     <button mat-button color="primary" class="add-nickname-btn">Add Nickname <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>edit</mat-icon>
+    <span>Edit</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>delete</mat-icon>
+    <span>Delete</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>content_copy</mat-icon>
+    <span>Clone</span>
+  </button>
+</mat-menu>

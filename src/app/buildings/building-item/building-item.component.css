@@ -1,0 +1,43 @@
+.building-item-card {
+  width: 300px;
+  float: left;
+  margin-bottom: 30px;
+}
+
+::ng-deep .mat-card-header-text {
+  width: 100%;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label {
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06)
+}
+
+.place-box-label {
+  background-color: #673ab745;
+  border: 0px solid blueviolet;
+  color: #673ab7;
+}
+
+.nickname-counts-label {
+  padding-top: 5px;
+  color: #8c8c8c;
+}
+
+.add-nickname {
+  text-align: center;
+  background-color: #eff3f5;
+}
+
+.add-nickname-btn {
+  width: 100%;
+}

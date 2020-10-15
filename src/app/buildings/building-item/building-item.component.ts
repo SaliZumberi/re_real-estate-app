@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Building} from "../../shared/models/building.model";
 
 @Component({
   selector: 're-building-item',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./building-item.component.css']
 })
 export class BuildingItemComponent implements OnInit {
+  @Input() building: Building;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
