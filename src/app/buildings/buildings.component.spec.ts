@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BuildingsComponent } from './buildings.component';
+import {BuildingsService} from "../shared/services/buildings.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {MatDialog} from "@angular/material/dialog";
+import {MaterialModule} from "../shared/modules/material/material.module";
 
 describe('BuildingsComponent', () => {
   let component: BuildingsComponent;
@@ -8,7 +12,9 @@ describe('BuildingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BuildingsComponent ]
+      declarations: [ BuildingsComponent ],
+      imports: [ HttpClientTestingModule, MaterialModule ],
+      providers: [BuildingsService, MatDialog]
     })
     .compileComponents();
   });
