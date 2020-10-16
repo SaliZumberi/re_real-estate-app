@@ -15,6 +15,8 @@ export class NicknameEditorComponent implements OnInit {
   @Output() updateFormGroup: EventEmitter<FormGroup> = new EventEmitter<FormGroup>()
   nickNameForm: FormGroup;
 
+  constructor(private fb: FormBuilder, private validationService: ValidationService) {
+  }
 
   ngOnInit(): void {
     if (this.nickNames.length > 0) {
@@ -22,6 +24,7 @@ export class NicknameEditorComponent implements OnInit {
         nickNames: this.fb.array(this.nickNames.map(nickName =>
           this.fb.group({
             id: nickName.id,
+            name: [nickName.name, [Validators.required], [this.validationService.nickNameValidator()]]
           })))
       })
     } else {
@@ -39,6 +42,7 @@ export class NicknameEditorComponent implements OnInit {
     const nickNames = this.nickNameForm.get('nickNames') as FormArray;
     nickNames.push(this.fb.group({
       id: generateId(),
+      name: [null, [Validators.required], [this.validationService.nickNameValidator()]]
     }))
   }
 
