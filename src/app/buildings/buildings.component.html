@@ -11,7 +11,7 @@
                     (editBuilding)="editBuilding(building)"
   ></re-building-item>
 </div>
-<div class="no-items-box" *ngIf=" (buildings$ | async).length ===0">
+<div class="no-items-box" *ngIf=" (buildings$ | async)?.length ===0">
   <mat-icon class="no-items-icon">domain</mat-icon>
   <div class="no-items-title">No Buildings found</div>
   <div  class="no-items-subtitle">Add a new Building.</div>
