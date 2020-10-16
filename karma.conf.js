@@ -13,7 +13,10 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false,
+      jasmine: {
+        random: false,
+      }
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/real-estate-app'),
@@ -26,7 +29,12 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
-  });
+    singleRun: true,
+    restartOnFileChange: true,
+    browserConsoleLogOptions: {
+      level: 'log',
+      format: '%b %T: %m',
+      terminal: true
+    },
+  },);
 };
