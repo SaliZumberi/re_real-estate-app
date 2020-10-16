@@ -3,7 +3,8 @@
   <button mat-raised-button
           class="add-building"
           color="primary"
-          (click)="addBuilding()">Add Building</button>
+          (click)="addBuilding()">Add Building
+  </button>
 </div>
 <div class="building-items" *ngIf="(buildings$ | async)?.length >0">
   <re-building-item *ngFor="let building of buildings$ | async"
@@ -14,5 +15,5 @@
 <div class="no-items-box" *ngIf=" (buildings$ | async)?.length ===0">
   <mat-icon class="no-items-icon">domain</mat-icon>
   <div class="no-items-title">No Buildings found</div>
-  <div  class="no-items-subtitle">Add a new Building.</div>
+  <div class="no-items-subtitle">Add a new Building.</div>
 </div>

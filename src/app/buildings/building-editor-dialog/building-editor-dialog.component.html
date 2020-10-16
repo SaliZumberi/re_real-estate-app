@@ -41,6 +41,6 @@
 <mat-dialog-actions>
   <div class="action-box">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button color="primary" [disabled]="buildingForm?.invalid || nickNameForm?.invalid" (click)="saveBuilding()">Save</button>
+    <button id="save-building-btn" mat-raised-button color="primary" [disabled]="buildingForm?.invalid || nickNameForm?.invalid" (click)="saveBuilding()">Save</button>
   </div>
 </mat-dialog-actions>

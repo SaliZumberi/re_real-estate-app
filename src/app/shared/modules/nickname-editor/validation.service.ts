@@ -8,9 +8,6 @@ import {map, switchMap} from "rxjs/operators";
 })
 export class ValidationService {
 
-  constructor() {
-  }
-
   nickNameValidator = (time = 400) => {
     return (input: FormControl) => {
       return timer(time).pipe(
