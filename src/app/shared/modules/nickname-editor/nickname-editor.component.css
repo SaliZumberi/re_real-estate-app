@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+}
+
+.add-nickname-box{
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px
+}

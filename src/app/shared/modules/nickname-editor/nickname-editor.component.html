@@ -1,0 +1,23 @@
+<div class="add-nickname-box">
+  <button mat-raised-button (click)="addNewNickName()">Add Nickname</button>
+</div>
+<form [formGroup]="nickNameForm">
+  <div formArrayName="nickNames"
+       *ngFor="let nickName of nickNamesFormControlArray.controls; let nickNamesIndex = index">
+    <mat-form-field style="width: 100%;" [formGroupName]="nickNamesIndex">
+      <mat-label>Nickname {{nickNamesIndex + 1}}</mat-label>
+      <input [id]="'nickName_' + nickNamesIndex" placeholder="Please assign an suitable name" matInput type="text"
+             formControlName="name">
+      <button [id]="'remove_' + nickNamesIndex"
+              (click)="removeNickName(nickNamesIndex)"
+              mat-button
+              matSuffix
+              mat-icon-button
+              aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-error *ngIf="nickNamesFormControlArray.controls[nickNamesIndex].get('name').hasError('nickNameExists')">Nickname is not unique
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>
