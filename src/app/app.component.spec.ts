@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('real-estate-app app is running!');
+    expect(compiled.querySelector('.top-navbar span').textContent).toContain('RE Real Estate Management App');
   });
 });

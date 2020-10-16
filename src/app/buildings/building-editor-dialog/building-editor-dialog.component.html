@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Add a new Building</h2>
+<mat-dialog-content>
+  <form [formGroup]="buildingForm">
+    <div class="section-header">Details</div>
+    <ng-container formGroupName="address">
+      <div class="field-row">
+        <mat-form-field appearance="fill" style="width: 70%">
+          <mat-label>Street Name</mat-label>
+          <input matInput formControlName="streetName">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 30%">
+          <mat-label>Street Nr.</mat-label>
+          <input type="number" matInput formControlName="streetNumber">
+        </mat-form-field>
+      </div>
+      <div class="field-row">
+        <mat-form-field appearance="fill" style="width: 30%">
+          <mat-label>Zip</mat-label>
+          <input type="number" matInput formControlName="zip">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 70%">
+          <mat-label>Place</mat-label>
+          <input matInput formControlName="place">
+        </mat-form-field>
+      </div>
+    </ng-container>
+    <div class="field-row">
+      <mat-form-field style="width: 100%">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+  <h4 class="section-header">Nicknames</h4>
+
+  <div class="field-row">
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="action-box">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="buildingForm?.invalid || nickNameForm?.invalid" (click)="saveBuilding()">Save</button>
+  </div>
+</mat-dialog-actions>

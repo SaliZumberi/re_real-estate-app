@@ -1,0 +1,42 @@
+.field-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-form-field {
+  padding-right: 10px;
+}
+
+.section-header {
+  color: #46277c;
+  width: 50%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.mat-dialog-content {
+  max-height: initial !important;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-dialog-content {
+  flex-grow: 1;
+}
+
+textarea {
+  height: 100%;
+}
+
+.action-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
