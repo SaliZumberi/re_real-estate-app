@@ -11,21 +11,9 @@ export class BuildingsService {
   constructor(private httpClient: HttpClient) {
   }
 
-  saveBuilding() {
-
-  }
-
   getBuildings(): Observable<Building[]> {
     return this.httpClient
       .get<Building[]>('assets/data/buildings.json', {withCredentials: true})
   }
 
-
-  removeBuilding() {
-
-  }
-
-  updateBuilding() {
-
-  }
 }
