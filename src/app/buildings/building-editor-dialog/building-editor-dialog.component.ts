@@ -10,6 +10,7 @@ import {Building} from "../../shared/models/building.model";
 })
 export class BuildingEditorDialogComponent {
   buildingForm: FormGroup;
+  nickNameForm: FormGroup;
 
   constructor(private fb: FormBuilder,
               public dialogRef: MatDialogRef<BuildingEditorDialogComponent>,
@@ -29,6 +30,7 @@ export class BuildingEditorDialogComponent {
     this.dialogRef.close({
       ...this.building,
       ...this.buildingForm.value,
+      ...this.nickNameForm.value
     })
   }
 }
