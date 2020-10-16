@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Building} from "../../shared/models/building.model";
 
 @Component({
@@ -8,11 +8,13 @@ import {Building} from "../../shared/models/building.model";
 })
 export class BuildingItemComponent implements OnInit {
   @Input() building: Building;
+  @Output() editBuilding = new EventEmitter()
 
   constructor() {
   }
 
   ngOnInit(): void {
+    console.log('HOI', this.building)
   }
 
 }
