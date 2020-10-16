@@ -14,15 +14,40 @@
     "nickNames": [
       {
         "id": "1f4c7c72d-a988-4eef-292a7-e237f5980ee5c",
-        "name": "Test"
+        "name": "ABC"
       },
       {
         "id": "1f4c7c7233d-a988-4eef-292a7-e237f5980ee5c",
-        "name": "Baby"
+        "name": "AAA"
       }
     ],
     "description" : "Education is what remains after one has forgotten what one has learned in school.",
     "updatedAt": "2012-11-14T15:25:33Z",
     "createdAt:": "2012-11-14T15:25:33Z"
-  }
+  }, {
+  "id": "1f4c7c7d-a988-4eef-92a7-e37f5980ee5c",
+  "address": {
+    "id": "0c49e0b6-13b6-47a0-88b0-bf5288424559",
+    "streetName": "Riethofstasse",
+    "streetNumber": "9",
+    "zip": 8152,
+    "place": "Zürich",
+    "updatedAt": "2012-11-14T15:25:33Z",
+    "createdAt:": "2012-11-14T15:25:33Z"
+  },
+  "imageUrl": "https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/418/2018/05/CIRCLE-Image.png",
+  "nickNames": [
+    {
+      "id": "1f4c7c72d-a988-4eef-292a7-e237f5980ee5c",
+      "name": "aCircle"
+    },
+    {
+      "id": "1f4c7c7233d-a988-4eef-292a7-e237f5980ee5c",
+      "name": "aSAP"
+    }
+  ],
+  "description" : "Education is what remains after one has forgotten what one has learned in school.",
+  "updatedAt": "2012-11-14T15:25:33Z",
+  "createdAt:": "2012-11-14T15:25:33Z"
+}
 ]
