@@ -4,6 +4,7 @@ import {Entity} from "./entity.model";
 
 export interface Building extends Entity{
   address: Address;
-  imageUrl: string
+  imageUrl: string;
+  description: string;
   nickNames: NickName[];
 }
